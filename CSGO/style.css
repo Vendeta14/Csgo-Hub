@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100vh;
+}
+
+body{
+    background:#0f1117;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.8)
+    ),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass-card{
+    position:relative;
+    width:100%;
+    max-width:450px;
+
+    padding:45px;
+
+    background:rgba(17,21,30,0.85);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 40px rgba(255,123,0,.15),
+        0 0 80px rgba(255,123,0,.08);
+
+    overflow:hidden;
+}
+
+/* Animated Border */
+
+.glass-card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+
+    background:linear-gradient(
+        45deg,
+        #ff7b00,
+        #ffb347,
+        #00c8ff,
+        #ff7b00
+    );
+
+    background-size:300% 300%;
+    animation:borderGlow 8s linear infinite;
+
+    border-radius:32px;
+    z-index:-2;
+}
+
+.glass-card::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+
+    background:rgba(17,21,30,0.95);
+    border-radius:28px;
+
+    z-index:-1;
+}
+
+@keyframes borderGlow{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+    text-align:center;
+    font-size:2.8rem;
+    font-weight:800;
+
+    color:#ff7b00;
+
+    text-shadow:
+        0 0 10px #ff7b00,
+        0 0 25px #ff7b00,
+        0 0 50px rgba(255,123,0,.5);
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.custom-input{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    transition:.3s ease;
+}
+
+.custom-input::placeholder{
+    color:rgba(255,255,255,.5);
+}
+
+.custom-input:focus{
+    background:rgba(255,255,255,.08);
+    color:#fff;
+
+    border-color:#ff7b00;
+
+    box-shadow:
+        0 0 10px rgba(255,123,0,.3),
+        0 0 25px rgba(255,123,0,.25);
+
+    outline:none;
+}
+
+.form-control{
+    background:transparent;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-orange{
+    background:linear-gradient(
+        135deg,
+        #ff7b00,
+        #ff9d00
+    );
+
+    border:none;
+    color:white;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    font-weight:600;
+    letter-spacing:.5px;
+
+    transition:.3s ease;
+}
+
+.btn-orange:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(255,123,0,.35),
+        0 0 30px rgba(255,123,0,.4);
+
+    color:white;
+}
+
+.btn-orange:active{
+    transform:translateY(0);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.8)
+    ),
+    url('https://images.unsplash.com/photo-1511512578047-dfb367046420');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:800;
+
+    text-shadow:
+        0 0 20px rgba(255,123,0,.6),
+        0 0 40px rgba(255,123,0,.4);
+}
+
+.hero p{
+    color:#ddd;
+    margin-top:15px;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title{
+    font-size:2.4rem;
+    font-weight:700;
+
+    color:#ff7b00;
+
+    margin-bottom:40px;
+
+    text-align:center;
+}
+
+/* =========================
+   GAME CARDS
+========================= */
+
+.game-card{
+    background:#171b24;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,123,0,.12);
+
+    transition:.35s ease;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#ff7b00;
+
+    box-shadow:
+        0 0 20px rgba(255,123,0,.2),
+        0 0 40px rgba(255,123,0,.15);
+}
+
+/* =========================
+   SKIN CARDS
+========================= */
+
+.skin-card{
+    background:#171b24;
+
+    border-radius:20px;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s ease;
+
+    cursor:pointer;
+}
+
+.skin-card:hover{
+    transform:translateY(-8px) scale(1.03);
+
+    border-color:#00c8ff;
+
+    box-shadow:
+        0 0 20px rgba(0,200,255,.25),
+        0 0 40px rgba(0,200,255,.15);
+}
+
+.skin-card h4{
+    font-weight:600;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    backdrop-filter:blur(10px);
+    background:rgba(11,13,18,.9) !important;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.navbar-brand{
+    color:#ff7b00 !important;
+    font-weight:700;
+}
+
+.nav-link{
+    color:#ccc !important;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ff7b00 !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0b0d12;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#11151e;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff7b00;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff9500;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .glass-card{
+        width:90%;
+        padding:35px 25px;
+    }
+
+    .logo{
+        font-size:2.2rem;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+}
